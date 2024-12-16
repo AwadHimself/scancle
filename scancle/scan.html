@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scan Form</title>
+  <link rel="stylesheet" href="css/scan.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" title="Logo">
+            <img class="logo" src="assets/login/logo.png" alt="Logo">
+        </a>
+        <h2 style="position: absolute;top: 1.5rem; left: 4.5rem;">SCANCLE</h2>
+        <div class="buttons">
+            <div class="button-wrapper">
+                <button class="btn-2" style="position: absolute; top: .7rem; left: 16rem; width: 124px; font-size: larger;"> 
+                    <span>Home</span>
+                </button>
+                <button class="btn-2" style="position: absolute; top: .7rem; left: 26rem; width: 124px; font-size: larger;" onclick="scrollWin()"> 
+                    <span>Features</span>
+                </button>
+                <button class="btn-2" style="position: absolute; top: .7rem; left: 36rem; width: 124px; font-size: larger;"> 
+                    <span>Pricing</span>
+                </button>
+                <button class="btn-2" style="position: absolute; top: .7rem; left: 75rem; width: 124px; font-size: larger;" onclick="logout()"> 
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainsec">
+        <div class="container">
+            <div class="left-section">
+                <h1 class="scancle-title">Scan <span class="red-text">cle</span></h1>
+                <div class="steps">
+                    <h2>How to use</h2>
+                    <ol>
+                        <li>Step 1: Enter IP Address</li>
+                        <li>Step 2: Choose Scan Options</li>
+                        <li>Step 3: Select Ports</li>
+                        <li>Step 4: Start Scan</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <div class="form-container">
+                    <label class="section-title">Target</label>
+                    <input type="text" class="ip-input" placeholder="Enter IP Address">
+                    <label class="section-title">Scan Options</label>
+                    <div class="options">
+                        <div class="option">
+                            <label>
+                                <input type="checkbox">
+                                Option 1
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input type="checkbox">
+                                Option 2
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label>
+                                <input type="checkbox">
+                                Option 3
+                            </label>
+                        </div>
+                    </div>
+                    <label class="section-title">Port Selection</label>
+                    <select class="dropdown">
+                        <option>TOP 10 PORTS</option>
+                        <option>TOP 20 PORTS</option>
+                        <option>TOP 50 PORTS</option>
+                    </select>
+                    <div class="authorization">
+                        <label>
+                            <input type="checkbox">
+                            I am authorized to scan this target and I agree with the Terms of Service.
+                        </label>
+                    </div>
+                    <button class="start-scan">START SCAN</button>
+                </div>
+            </div>
+        </div>
+
+        
+    <script src="js/scan.js"></script>
+</body>
+</html>
