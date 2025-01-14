@@ -12,53 +12,65 @@
 <body>
          
      
-  <div class="navbar">  <a href="#" title="Logo">
-    <img class="logo" src="assets/login/logo.png" alt="Logo">
+    <div class="navbar" style="display: flex; justify-content: space-between  ;">  
+        <div style="display: flex ;
+            gap: 14px;
+            margin-top: 13px;
+            margin-left: 13px;
+            align-items: center;">
+            <a href="#" title="Logo">
+                <img class="logo" src="assets/login/logo.png" alt="Logo">
+            
+            </a>
+            <h2 style="margin-top: -11px;">SCANCEL</h2>
+        </div>
 
-</a>
-<h2 style="position: absolute;top: 1.5rem; left: 4.5rem;">SCANCEL</h2>
 
 
-<div class="buttons">
 
-<div class="button-wrapper" onclick="home()">
-    <button class="btn-2" style="position: absolute;
-    top: .7rem;
-    left: 16rem;
-    width: 124px;
-    font-size: larger;"> 
-        <span>Home</span>
-    </button>
-    <button class="btn-2" style="position: absolute;
-    top: .7rem;
-    left: 26rem;
-    width: 124px;
-    font-size: larger;" onclick="scrollWin()"> 
-        <span>Profile</span>
-    </button>
-    <button class="btn-2" style="position: absolute;
-    top: .7rem;
-    left: 36rem;
-    width: 124px;
-    font-size: larger;"  onclick="fun()"> 
-        <span>scan</span>
-    </button>
-    <button class="btn-2" style="position: absolute;
-    top: .7rem;
-    left: 75rem;
-    width: 124px;
-    font-size: larger;" onclick="logout()"> 
-        <span>logout</span>
-    </button>
+        <div class="button-wrapper" style=" display: flex;
+            margin-top: 10px;">
+            <div  >
+                <button class="btn-2" style=" width: 124px; font-size: larger;">
+                    <a href="home%20page.html" style="color: black; text-decoration: none; display: block;">
+                        <span>Home</span>
+                    </a>
+                </button>
+            
+                <button class="btn-2" style=" width: 124px; font-size: larger;">
+                    <a href="profile.html" style="color: black; text-decoration: none; display: block;">
+                        <span>Profile</span>
+                    </a>
+                </button>
+            
+                <button class="btn-2" style="width: 124px; font-size: larger;">
+                    <a href="scan.html" style="color: black; text-decoration: none; display: block;">
+                        <span>Scan</span>
+                    </a>
+                </button>
+
+            </div>
+         </div>
+         <div style="margin-top: 10px;">
+          <button class="btn-2" id="auth-button" style=" width: 124px; font-size: larger;" onclick="handleAuthButton()"> 
+              <a><span id="auth-button-text"></span></a>
+           </button>
+
+      </div>
+
+
 </div>
-</div>
-</div>
+
 <div class="container">
     
-    <div class="profilepic"> <img src="Assets/profile/profilepic.png" alt="">
-      
+    <div class="profilepic">
+        <img id="profile-image" src="" alt="Profile Picture"  style="width: 200px;
+        height: 350px;
+        display: block;
+        border-radius: 20px;
+        border: 2px solid;">
     </div>
-    <div class="text">
+            <div class="text">
         <p class="text1">Name</p>
         <p class="text2">Organization</p>
     </div>
@@ -120,49 +132,14 @@
         </div>
       </div>
       <div id="options-container">
-        <div class="row">
-          <input type="checkbox" class="option-checkbox">
-          <span class="ip-address">192.168.1.1</span>
-          <a href="#" class="view-more">view more</a>
-          <button class="delete-btn">➖</button>
-        </div>
-        <div class="row">
-          <input type="checkbox" class="option-checkbox">
-          <span class="ip-address">192.168.1.1</span>
-          <a href="#" class="view-more">view more</a>
-          <button class="delete-btn">➖</button>
-        </div>
-        <div class="row">
-          <input type="checkbox" class="option-checkbox">
-          <span class="ip-address">192.168.1.1</span>
-          <a href="#" class="view-more">view more</a>
-          <button class="delete-btn">➖</button>
-        </div>
-        <div class="row">
-          <input type="checkbox" class="option-checkbox">
-          <span class="ip-address">192.168.1.1</span>
-          <a href="#" class="view-more">view more</a>
-          <button class="delete-btn">➖</button>
-        </div>
-        <div class="row">
-            <input type="checkbox" class="option-checkbox">
-            <span class="ip-address">192.168.1.1</span>
-            <a href="#" class="view-more">view more</a>
-            <button class="delete-btn">➖</button>
-          </div>
-          <div class="row">
-            <input type="checkbox" class="option-checkbox">
-            <span class="ip-address">192.168.1.1</span>
-            <a href="#" class="view-more">view more</a>
-            <button class="delete-btn">➖</button>
-          </div>
-          <div class="row">
-            <input type="checkbox" class="option-checkbox">
-            <span class="ip-address">192.168.1.1</span>
-            <a href="#" class="view-more">view more</a>
-            <button class="delete-btn">➖</button>
-          </div>
-      </div>
+        <div id="no-scans-message" style="display:none; display: block;
+        text-align: center;
+        margin-top: 27px;
+        font-size: xx-large;
+        font-family: math;
+    ">No previous scan operations.</div>
+
+       
     
 </div> 
 

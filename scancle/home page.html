@@ -6,68 +6,83 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Mulish&display=swap"
-            rel="stylesheet"
-        >
         <link rel="stylesheet" href="css/homepage.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     </head>
     <body>
+      <div class="navbar" style="display: flex; justify-content: space-between  ;">  
+        <div style="display: flex ;
+            gap: 14px;
+            margin-top: 13px;
+            margin-left: 13px;
+            align-items: center;">
+            <a href="#" title="Logo">
+                <img class="logo" src="assets/login/logo.png" alt="Logo">
             
-        <div class="navbar">  <a href="#" title="Logo">
-                    <img class="logo" src="assets/login/logo.png" alt="Logo">
-                
-                </a>
-                <h2 style="position: absolute;top: 1.5rem; left: 4.5rem;">SCANCEL</h2>
-                
-                
-            <div class="buttons">
-                
-                <div class="button-wrapper" onclick="home()">
-                    <button class="btn-2" style="position: absolute;
-                    top: .7rem;
-                    left: 16rem;
-                    width: 124px;
-                    font-size: larger;"> 
-                        <span>Home</span>
-                    </button>
-                    <button class="btn-2" style="position: absolute;
-                    top: .7rem;
-                    left: 26rem;
-                    width: 124px;
-                    font-size: larger;" onclick="scrollWin()"> 
-                        <span>Profile</span>
-                    </button>
-                    <button class="btn-2" style="position: absolute;
-                    top: .7rem;
-                    left: 36rem;
-                    width: 124px;
-                    font-size: larger;"  onclick="fun()"> 
-                        <span>scan</span>
-                    </button>
-                    <button class="btn-2" style="position: absolute;
-                    top: .7rem;
-                    left: 75rem;
-                    width: 124px;
-                    font-size: larger;" onclick="logout()"> 
-                        <span>logout</span>
-                    </button>
-                </div>
-            </div>
+            </a>
+            <h2 style="margin-top: -11px;">SCANCEL</h2>
         </div>
-        <div class="mainsec">
-           
-            <div class="container">
-                <p class="text">SCAN<span class="red">CEL</span></p>
-            </div>
+
+
+
+
+        <div class="button-wrapper" style=" display: flex;
+            margin-top: 10px;">
+            <div  >
+                <button class="btn-2" style=" width: 124px; font-size: larger;">
+                    <a href="home%20page.html" style="color: black; text-decoration: none; display: block;">
+                        <span>Home</span>
+                    </a>
+                </button>
             
-            <div class="subtext">
-                <p class="sub1">Discover open ports. </p>
-                <p class="sub2"> Protect your network,servers and IT assets</p>
+                <button class="btn-2" style=" width: 124px; font-size: larger;">
+                    <a href="profile.html" style="color: black; text-decoration: none; display: block;">
+                        <span>Profile</span>
+                    </a>
+                </button>
+            
+                <button class="btn-2" style="width: 124px; font-size: larger;">
+                    <a href="scan.html" style="color: black; text-decoration: none; display: block;">
+                        <span>Scan</span>
+                    </a>
+                </button>
+
             </div>
+         </div>
+         <div style="margin-top: 10px;">
+          <button class="btn-2" id="auth-button" style=" width: 124px; font-size: larger;" onclick="handleAuthButton()"> 
+              <a><span id="auth-button-text"></span></a>
+           </button>
+
+      </div>
+
+
+</div>
+
+        <div class="mainsec">
+          <div style="text-align: center;
+          display: flex
+      ;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 85px;
+          gap: 10px;">
+            <div class="container">
+              <p class="text">SCAN<span class="red">CEL</span></p>
+          </div>
+          
+          <div class="subtext">
+              <p class="sub1">Discover open ports. </p>
+          </div>
+          <div class="subtext">
+            <p class="sub2"> Protect your network,servers and IT assets.</p>
+        </div>
+
+
+          </div>
+           
             <div class="button">
                 <button class="btn-6" onclick="fun2()" type="submit" >
                     <div class="svg-wrapper-1">
@@ -84,41 +99,49 @@
         </div>
        
      
-    <div class="sec2">
+    <div class="sec2" >
         <div class="Features">
             <p >Features</p>
         </div>
 
-        <div class="ft">
-            <div class="ftpic" style="margin-left: 75px;">
-                <img src="Assets/home page/features.png" alt="" srcset="" style="    margin-left: 0%px;">
-                <p style="font-size: 33px; margin-left: 63px;margin-top: -20px; font-family: monospace;" >
-                   
-                    Feature 1
-                </p>
-                <p style="font-size: 20px; margin-left: -49px ;margin-top: 5px; font-family: monospace;">
-                    lorem ipsumlorem ipsumlorem ipsum</p>
-            </div>
-            <div class="ftpic" style="margin-left: 150px;">
-                <img src="Assets/home page/features.png" alt="" srcset="" style="    margin-left: 0%px;">
-                <p style="font-size: 33px; margin-left: 63px;margin-top: -20px; font-family: monospace;" >
-                   
-                    Feature 1
-                </p>
-                <p style="font-size: 20px; margin-left: -49px ;margin-top: 5px; font-family: monospace;">
-                    lorem ipsumlorem ipsumlorem ipsum</p>
-            </div>
-            <div class="ftpic" style="margin-left: 150px; ;">
-                <img src="Assets/home page/features.png" alt="" srcset="" style="    margin-left: 0%px;">
-                <p style="font-size: 33px; margin-left: 63px;margin-top: -20px; font-family: monospace;" >
-                   
-                    Feature 1
-                </p>
-                <p style="font-size: 20px; margin-left: -49px ;margin-top: 5px; font-family: monospace;">
-                    lorem ipsumlorem ipsumlorem ipsum</p>
-            </div>
+        <div class="ft" style="display: flex; margin-right: 30px; margin-left: 30px; gap: 60px;">
+            <div class="ftpic" style="display: block; width: fit-content;" >
+                <div style="justify-self: center; ">  <img src="Assets/scan page/scan.avif" style="width: 250px; height: 250px;"> </div>
+                <h2 style="text-align: center;">
+                  IP Scan and Analysis
+                </h2>
+                <div style="text-align: center;">
+                  Users can enter an IP address and select the type of scan they want to performb 
+                   (e.g., port scan, UDP/TCP scan, quick scan).  
+                   The system then analyzes the IP and displays 
+                   the bropen/closed ports and the services associated with them</div>  
+             </div>
+             <div class="ftpic" style="display: block;width: fit-content; " >
+              <div style="justify-self: center;">  <img src="Assets/home page/features.png" > </div>
+              <h2 style="text-align: center;">
+                Security Recommendations
+              </h2>
+              <div style="text-align: center;">
+                For each open port, the website provides security solutions and recommendations to enhance network protection (e.g., using encrypted protocols, disabling unnecessary services, or limiting access).</div>  
+           </div>
+           <div class="ftpic" style="display: block; width: fit-content; " >
+            <div style="justify-self: center ;">  <img src="Assets/home page/management.png" style="width: 250px; height: 250px;"> </div>
+            <h2 style="text-align: center;">
+              User Account Management
+            </h2>
+            <div style="text-align: center;">
+              Users need to log in to perform scans. Their scan results are saved and can be accessed later, allowing them to review past scans and download reports at any time.</div>  
+         </div>
+
+
+             
+            
         </div>        
-        </div>
+      
+
+
+
+
         <div class="about-section">
             <div class="inner-width">
               <h1 >About Us</h1>
@@ -159,161 +182,122 @@
               </div>
             </div>
           </div>
-          <div class="sec4"><h1 
-          style="font-size: 80px;
-          font-weight: bold; color: white;">
-          pricing</h1>
-        </div>
-          <section class="pricing-plans" style="
-          place-items: center;
-          min-height: 100vh;
-          background-color: #171717;
-      ">
-            <div class="pricing-card basic">
-              <div class="heading">
-                <h4>BASIC</h4>
-                <p>for small websites or blogs</p>
+            <div style="  background-color: #171717;">
+            
+            <div class="sec4"><h1 
+            style="font-size: 80px;
+            font-weight: bold; color: white;">
+            pricing</h1>
+            <section class="pricing-plans" style="
+            place-items: center;
+            min-height: 100vh;
+            background-color: #171717;
+        ">
+              <div class="pricing-card basic">
+                <div class="heading">
+                  <h4> Free Plan </h4>
+                  <p>for small websites or blogs</p>
+                </div>
+                <p class="price">
+                  $0
+                  <sub>/month</sub>
+                </p>
+                <ul class="features">
+                  <li>
+                    Limited to one scan per day
+                  </li>
+                  <li>
+                    Basic scan types 
+                  </li>
+                  
+                  <li>
+                    No downloadable report feature
+                  </li>
+                  <li>
+                    No historical scan access 
+                  </li>
+                </ul>
+                <button class="cta-btn">SELECT</button>
               </div>
-              <p class="price">
-                $2
-                <sub>/month</sub>
-              </p>
-              <ul class="features">
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>1 domain</strong> name
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>10 GB</strong> of disk space
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>100GB </strong>of bandwidth
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>1 MySQL</strong> database
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>5 email</strong> accounts
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>cPanel</strong> control panel
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>Free SSL</strong> certificate
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>24/7</strong> support
-                </li>
-              </ul>
-              <button class="cta-btn">SELECT</button>
-            </div>
-            <div class="pricing-card standard">
-              <div class="heading">
-                <h4>STANDARD</h4>
-                <p>for medium-sized businesses</p>
+              <div class="pricing-card standard">
+                <div class="heading">
+                  <h4>Premium Plan</h4>
+                  <p>for Advanced User</p>
+                </div>
+                <p class="price">
+                  $5
+                  <sub>/month</sub>
+                </p>
+                <ul class="features">
+                  <li>
+                    Unlimited scans per month
+                  </li>
+                  <li>
+                    Full range of scan types4
+                   </li>
+                  <li>
+                    Detailed service and port information
+                  </li>
+                  <li>
+                    Downloadable reports
+                  </li>
+                  <li>
+                    Access to historical scans and results
+                  </li>
+                  <li>
+                    Security recommendations   
+                 </li>
+                  
+                </ul>
+                <button class="cta-btn">SELECT</button>
               </div>
-              <p class="price">
-                $5
-                <sub>/month</sub>
-              </p>
-              <ul class="features">
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>Unlimited</strong> domain name
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>50 GB</strong> of disk space
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>500GB </strong>of bandwidth
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>10 MySQL</strong> database
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>50 email</strong> accounts
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>cPanel</strong> control panel
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>Free SSL</strong> certificate
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>24/7</strong> support
-                </li>
-              </ul>
-              <button class="cta-btn">SELECT</button>
-            </div>
-            <div class="pricing-card premium">
-              <div class="heading">
-                <h4>PREMIUM</h4>
-                <p>for small businesses</p>
+              <div class="pricing-card premium">
+                <div class="heading">
+                  <h4>Business Plan</h4>
+                  <p>for Team/Business Use</p>
+                </div>
+                <p class="price">
+                  $10
+                  <sub>/month</sub>
+                </p>
+                <ul class="features">
+                  <li>
+                    All features of the Premium Plan
+                  </li>
+                  <li>
+                    Multiple user accounts (up to 5 users)
+                  </li>
+                  <li>
+                    Advanced scanning capabilities                  </li>
+                  <li>
+                    Detailed and custom scan reports                  </li>
+                  <li>
+                    Access to exclusive advanced security features                  </li>
+                  <li>
+                    Advanced team collaboration tools                  </li>
+                  <li>
+                    Custom Scan Scheduling                  </li>
+                  <li>
+                   24/7 priority support
+                  </li>
+                  <li>
+                   Advanced security features
+                  </li>
+                </ul>
+                <button class="cta-btn">SELECT</button>
               </div>
-              <p class="price">
-                $10
-                <sub>/month</sub>
-              </p>
-              <ul class="features">
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>Unlimited</strong> domain name
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>100 GB</strong> of disk space
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>1TB </strong>of bandwidth
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>Unlimited MySQL</strong> database
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>Unlimited email</strong> accounts
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>cPanel</strong> control panel
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>Free SSL</strong> certificate
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>24/7 priority</strong> support
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i>
-                  <strong>Advanced</strong> security features
-                </li>
-              </ul>
-              <button class="cta-btn">SELECT</button>
+            </section>
+          </div>
+          
+
             </div>
-          </section>
 
           <footer>
             <div class="footer-content">
                 <h3>SCANCEL</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam possimus, blanditiis consectetur autem voluptatem, doloribus sit libero tenetur aut impedit veniam alias hic ut laboriosam ratione dignissimos! Soluta, sint harum?</p>
+                <p>"© 2024 Scancel. All rights reserved. Providing secure and efficient IP scanning services for your network. Explore our plans to enhance your network security. Contact us: support@scancel.com | Follow us on Facebook, Twitter, LinkedIn."
+
+                </p>
                 <ul class="socials">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -335,23 +319,6 @@
             </div>
     
         </footer>
-          
-    
-          
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
     <body>
     <script src="js/home page.js"></script>
 

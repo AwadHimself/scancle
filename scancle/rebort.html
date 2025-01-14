@@ -8,47 +8,55 @@
 </head>
 <body>
          
-    <div class="navbar">  <a href="#" title="Logo">
-        <img class="logo" src="assets/login/logo.png" alt="Logo">
-    
-    </a>
-    <h2 style="position: absolute;top: 1.5rem; left: 4.5rem;">SCANCEL</h2>
-    
-    
-<div class="buttons">
-    
-    <div class="button-wrapper" onclick="home()">
-        <button class="btn-2" style="position: absolute;
-        top: .7rem;
-        left: 16rem;
-        width: 124px;
-        font-size: larger;"> 
-            <span>Home</span>
-        </button>
-        <button class="btn-2" style="position: absolute;
-        top: .7rem;
-        left: 26rem;
-        width: 124px;
-        font-size: larger;" onclick="scrollWin()"> 
-            <span>Profile</span>
-        </button>
-        <button class="btn-2" style="position: absolute;
-        top: .7rem;
-        left: 36rem;
-        width: 124px;
-        font-size: larger;"  onclick="fun()"> 
-            <span>scan</span>
-        </button>
-        <button class="btn-2" style="position: absolute;
-        top: .7rem;
-        left: 75rem;
-        width: 124px;
-        font-size: larger;" onclick="logout()"> 
-            <span>logout</span>
-        </button>
-    </div>
+    <div class="navbar" style="display: flex; justify-content: space-between  ;">  
+        <div style="display: flex ;
+            gap: 14px;
+            margin-top: 13px;
+            margin-left: 13px;
+            align-items: center;">
+            <a href="#" title="Logo">
+                <img class="logo" src="assets/login/logo.png" alt="Logo">
+            
+            </a>
+            <h2 style="margin-top: -11px;">SCANCEL</h2>
+        </div>
+
+
+
+
+        <div class="button-wrapper" style=" display: flex;
+            margin-top: 10px;">
+            <div  >
+                <button class="btn-2" style=" width: 124px; font-size: larger;">
+                    <a href="home%20page.html" style="color: black; text-decoration: none; display: block;">
+                        <span>Home</span>
+                    </a>
+                </button>
+            
+                <button class="btn-2" style=" width: 124px; font-size: larger;">
+                    <a href="profile.html" style="color: black; text-decoration: none; display: block;">
+                        <span>Profile</span>
+                    </a>
+                </button>
+            
+                <button class="btn-2" style="width: 124px; font-size: larger;">
+                    <a href="scan.html" style="color: black; text-decoration: none; display: block;">
+                        <span>Scan</span>
+                    </a>
+                </button>
+
+            </div>
+         </div>
+         <div style="margin-top: 10px;">
+          <button class="btn-2" id="auth-button" style="width: 124px; font-size: larger;" onclick="handleAuthButton()"> 
+              <a><span id="auth-button-text"></span></a>
+           </button>
+
+      </div>
+
+
 </div>
-</div>
+
     <div class="container">
         <!-- Table to Show Scan Results -->
         <div class="result-table">
@@ -58,49 +66,22 @@
                     <tr>
                         <th>Port</th>
                         <th>Service</th>
-                        <th>State</th>
+                        <th>Details</th>
+                         <th>State</th>
+                        <th>Risk</th>
+                        <th>DDoS Risk</th>
+                        <th>Open Port Danger</th>
                         <th>Solutions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>22</td>
-                        <td>SSH</td>
-                        <td>Open</td>
-                        <td>Secure Shell Service</td>
-                    </tr>
-                    <tr>
-                        <td>80</td>
-                        <td>HTTP</td>
-                        <td>Open</td>
-                        <td>Web Server</td>
-                    </tr>
-                    <tr>
-                        <td>443</td>
-                        <td>HTTPS</td>
-                        <td>Open</td>
-                        <td>Secure Web Server</td>
-                    </tr>
-                    <tr>
-                        <td>3306</td>
-                        <td>MySQL</td>
-                        <td>Closed</td>
-                        <td>Database Port</td>
-                    </tr>
-                    <tr>
-                        <td>53</td>
-                        <td>DNS</td>
-                        <td>Open</td>
-                        <td>Domain Name Service</td>
-                    </tr>
-                </tbody>
             </table>
         </div>
 
         <!-- Buttons under the table -->
         <div class="button-container">
-            <button class="btn-2" id="new-scan" onclick="goToNewScan()"><span>New Scan</span></button>
-            <button class="btn-2" id="download-report" onclick="downloadReport()"><span>Download Report</span></button>
+            <button class="btn-2" id="new-scan" onclick="goToNewScan()"><a><span>New Scan</span></a></button>
+            <button class="btn-2" id="download-report" onclick="downloadReport()"><a><span>Download Report</span></a></button>
         </div>
     </div>
 
@@ -108,38 +89,8 @@
         <p>&copy; 2024 SCANCLE</p>
     </footer>
 
-    <script>
-        // Script to redirect to a new scan page
-        function goToNewScan() {
-            window.location.href = "scan.html"; // Change this to your desired page
-        }
-
-        // Script to download the report as a text file
-        function downloadReport() {
-            const tableData = [
-                "Port\tService\tState\tDetails",
-                "22\tSSH\tOpen\tSecure Shell Service",
-                "80\tHTTP\tOpen\tWeb Server",
-                "443\tHTTPS\tOpen\tSecure Web Server",
-                "3306\tMySQL\tClosed\tDatabase Port",
-                "53\tDNS\tOpen\tDomain Name Service"
-            ].join("\n");
-
-            const blob = new Blob([tableData], { type: "text/plain" });
-            const link = document.createElement("a");
-            link.href = URL.createObjectURL(blob);
-            link.download = "scan_report.txt";
-            link.click();
-            
-            
-            
-            // NAVBAR SCRIPT
-            
-             function home() { window.open("home%20page.html"   , )   }
-                function scrollWin() { window.open("profile.html"   , "_self")  }
-                  function fun() { window.open("scan.html"   , "_self")  }
-
-                 function logout() { window.open("login%20page.html" , "_self") }   }
-    </script>
+    
+      
 </body>
+<script src="js/repot.js"></script>
 </html>
