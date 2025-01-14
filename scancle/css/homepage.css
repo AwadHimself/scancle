@@ -34,9 +34,7 @@ html{
   
   .logo {
     height: 3rem;
-    position: absolute;
-    top: 1.25rem;
-    left: 1.25rem;
+ 
   }
  
 .btn-2 {
@@ -60,13 +58,14 @@ html{
   color: var(--white);
  }
  
- .btn-2  span {
+ .btn-2 a span {
   position: relative;
   z-index: 10;
   transition: color 0.4s;
+  
  }
  
- .btn-2:hover span {
+ .btn-2:hover a span {
   color: rgb(255, 255, 255);
  }
  
@@ -94,18 +93,18 @@ html{
  }
  
 .mainsec {
+  display: flex;
+  gap: 80px;
   height: 527px;
  background-color: #314566;
  border-bottom: 3px solid;
  border-color: red;
+ flex-direction: column;
 
 }
 
 .container {
   display: inline-block;
-  position: absolute;
-  top: 10rem;
-  left: 32rem;
 }
 .text{
   font-size: 80px;
@@ -130,15 +129,6 @@ html{
   from {width: 0%;}
 }
 
-.subtext{
-  position: absolute;
-  top: 17rem;
-  left: 32rem;
-  width: 800px;
-  
-      
-  
-}
 
 .sub1,.sub2{
   font-size: 30px;
@@ -160,8 +150,7 @@ html{
 }
 
 .sub2{
-  margin-left: -170px;
-  margin-top: 12px;
+  
   animation: 
       type 2s steps(40)
 }
@@ -224,25 +213,20 @@ html{
 
 
 .button{
-  position: absolute;
-  top: 25rem;
   width: 586px;
   border-radius: 20px;
   border: 3px solid;
-  left: 24rem;
-
+align-self: center;
 }
 
 
 .sec2{
-  height: 470px;
-      border-bottom: 3px solid;
+  border-bottom: 3px solid;
     border-bottom-color: red;
 }
 
 .Features{
-  padding-left: 32rem;
-  padding-top: 2rem;
+  text-align: center;
   font-size: 80px;
   font-weight: bold;
   animation: apper 5s linear;
@@ -254,7 +238,6 @@ html{
   animation: apper 5s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
-  display: inline-block;
 }
 
 
@@ -277,6 +260,8 @@ html{
 }
 
 .inner-width {
+  border-top: 2px solid red;
+
   overflow: hidden;
   padding: 20px 20px;
   margin: auto;
@@ -438,6 +423,7 @@ html{
   background-color: #26262620;
   box-shadow: 0 0 32px transparent;
   text-align: center;
+  
 }
 
 .pricing-card.basic {
@@ -540,13 +526,12 @@ html{
 
 
 footer{
-  position: absolute;
-  bottom: -2055px;
   left: 0;
   right: 0;
   background: #111;
   height: auto; 
   color: #fff;
+  
 }
 .footer-content{
   display: flex;
@@ -554,6 +539,10 @@ footer{
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  animation: apper 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+
 }
 .footer-content h3{
   font-size: 2.1rem;
@@ -648,3 +637,4 @@ margin-top: 10px;
 margin-bottom: 20px;
 }
 }
+

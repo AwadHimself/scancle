@@ -8,23 +8,19 @@
   body {
     font-family: Arial, sans-serif;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    
   }
   
   .navbar{
     height: 80px;
-    border-bottom:2px solid;
+    border-bottom: solid;
     border-color:red;
+    
   }
   
   .logo {
     height: 3rem;
-    position: absolute;
-    top: 1.25rem;
-    left: 1.25rem;
+    
   }
  
 .btn-2 {
@@ -48,13 +44,13 @@
   color: var(--white);
  }
  
- .btn-2  span {
+ .btn-2 a span {
   position: relative;
   z-index: 10;
   transition: color 0.4s;
  }
  
- .btn-2:hover span {
+ .btn-2:hover a span {
   color: rgb(255, 255, 255);
  }
  
@@ -91,9 +87,12 @@
   }
   .mainsec{
     width: 100%;
-    border-top: 1px solid;
+    border-top: solid ;
+    border-color:red;
+
     position: absolute;
     top: 80px;
+    margin-top: -3px;
 
   }
   
@@ -269,9 +268,9 @@
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 25px;
-    margin-left: 625px;
-  }
+    position: absolute;
+    left: 705px;
+    top: 128px;  }
   .start-scan:hover {
     
     background-color: #314566;
@@ -279,7 +278,7 @@
   .loading-animation {
     display: none;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     
     animation: show 1s forwards;
 }
@@ -320,9 +319,6 @@
     bottom: 20px;
 }
 
-.loading-animation .text {
-    
-}
 
 @keyframes show {
     0% {
@@ -414,15 +410,26 @@
     right: -30px;
     bottom: 20px;
    }
-   .loading-animation .text{
+   .loading-animation .text {
     position: relative;
-    top: 36%;
-    font-size: 50px;
-    left: -2%;
-    letter-spacing: 21px;
-    animation: opi 4s linear;
+      top: 41%;
+      font-size: 34px;
+      left: -3%;
+      letter-spacing: 21px;
+      animation: opi 4s linear;
+      animation-iteration-count: infinite;
+      
+  }
+  .loading-animation .scan{
+    height: 120px;
+    border-left: 3px solid;
+    position: absolute;
+    top: -113%;
+    left: -0px;
+    animation: scan 4s ease-in-out;
     animation-iteration-count: infinite;
-}
+  }
+  
 
 @keyframes opi{
     0% 100%{
@@ -435,15 +442,7 @@
 
     }
 }
-   .loading-animation .scan{
-    height: 120px;
-    border-left: 3px solid;
-    position: absolute;
-    top: -60%;
-    left: -0px;
-    animation: scan 4s ease-in-out;
-    animation-iteration-count: infinite;
-   }
+   
    @keyframes scan{
     0% , 100%{
         left: 0;

@@ -34,9 +34,7 @@ html{
   
   .logo {
     height: 3rem;
-    position: absolute;
-    top: 1.25rem;
-    left: 1.25rem;
+    
   }
  
 .btn-2 {
@@ -60,13 +58,13 @@ html{
   color: var(--white);
  }
  
- .btn-2  span {
+ .btn-2 a span {
   position: relative;
   z-index: 10;
   transition: color 0.4s;
  }
  
- .btn-2:hover span {
+ .btn-2:hover a span {
   color: rgb(255, 255, 255);
  }
  
